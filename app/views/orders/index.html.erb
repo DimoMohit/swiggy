@@ -2,7 +2,7 @@
 
 <h1>Listing Orders</h1>
 
-<table>
+<table class='table table-striped'>
   <thead>
     <tr>
       <th>Title</th>
@@ -18,9 +18,9 @@
         <td><%= order.title %></td>
         <td><%= order.hotel_id %></td>
         <td><%= order.group %></td>
-        <td><%= link_to 'Show', order %></td>
-        <td><%= link_to 'Edit', edit_order_path(order) %></td>
-        <td><%= link_to 'Destroy', order, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Show', order,class: 'btn btn-outline-primary btn-sm' %></td>
+        <td><%= link_to 'Edit', edit_order_path(order),class: 'btn btn-outline-primary btn-sm' %></td>
+        <td><%= link_to 'Destroy', order, method: :delete, data: { confirm: 'Are you sure?' },class: 'btn btn-outline-primary btn-sm' %></td>
       </tr>
     <% end %>
   </tbody>
@@ -28,4 +28,6 @@
 
 <br>
 
-<%= link_to 'New Order', new_order_path %>
+<%= link_to 'New Order', new_order_path,class: 'btn btn-outline-primary btn-sm' %>
+<%= link_to 'Team Member', team_groups_path,class: 'btn btn-outline-primary btn-sm' %>
+<%= link_to 'Add Team Member', new_team_member_groups_path,class: 'btn btn-outline-primary btn-sm' %>

@@ -1,5 +1,5 @@
 class Item < ActiveRecord::Base
   belongs_to :order
   belongs_to :user
-  belongs_to :group, through: :user
+  delegate :group, :to => :user, :allow_nil => true
 end
