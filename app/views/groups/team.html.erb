@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Team Members</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Email</th>
+      <th>Role</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @users.each do |user| %>
+      <tr>
+        <td><%= user.name %></td>
+        <td><%= user.email %></td>
+        <td><%= user.role == 1 ? 'Admin' : 'Team Member'  %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'Back', :back %>
+<%= link_to 'Add Team Member', new_team_member_groups_path %>
